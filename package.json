@@ -1,0 +1,67 @@
+{
+  "name": "emoji-toolbox",
+  "displayName": "Emoji Toolbox",
+  "description": "An emoji toolbox to convert emojis from text and ASCII and insert emojis",
+  "version": "1.0.0",
+  "publisher": "ecrax",
+  "author": {
+    "name": "Leo Kling"
+  },
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:emoji-place.asciiToEmoji",
+    "onCommand:emoji-place.insertEmoji",
+    "onCommand:emoji-place.textToEmoji",
+    "onCommand:emoji-place.anythingToEmoji"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "emoji-place.asciiToEmoji",
+        "title": "Convert ASCII to emoji"
+      },
+      {
+        "command": "emoji-place.insertEmoji",
+        "title": "Insert emoji"
+      },
+      {
+        "command": "emoji-place.textToEmoji",
+        "title": "Convert text to emoji"
+      },
+      {
+        "command": "emoji-place.anythingToEmoji",
+        "title": "Convert anything to emoji"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.52.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.15.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1"
+  },
+  "dependencies": {
+    "emoticon": "^3.2.0"
+  }
+}
