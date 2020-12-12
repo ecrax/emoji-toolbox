@@ -4,15 +4,30 @@
   "description": "An emoji toolbox to convert emojis from text and ASCII and insert emojis",
   "version": "1.0.0",
   "publisher": "ecrax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecrax/emoji-toolbox"
+  },
+  "readme": "./README.md",
+  "icon": "./images/icon.png",
   "author": {
     "name": "Leo Kling"
   },
   "engines": {
-    "vscode": "^1.52.0"
+    "vscode": "^1.0.0"
   },
   "categories": [
     "Other"
   ],
+  "license": "SEE LICENSE IN THE LICENSE FILE",
+  "bugs": {
+    "url": "https://github.com/ecrax/emoji-toolbox/issues"
+  },
+  "galleryBanner": {
+    "color": "#6621de",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/ecrax/emoji-toolbox/blob/master/README.md",
   "activationEvents": [
     "onCommand:emoji-place.asciiToEmoji",
     "onCommand:emoji-place.insertEmoji",
@@ -49,7 +64,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.52.0",
+    "@types/vscode": "^1.0.0",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
