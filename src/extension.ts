@@ -8,9 +8,14 @@ export function activate(context: vscode.ExtensionContext) {
   const emoticon = require("emoticon");
 
   let emojis = new Array();
+
+  let emojisWithNames = new Map();
+
   for (let i = 0; i < emoticon.length; i++) {
     const element = emoticon[i]["emoji"];
     emojis.push(element);
+
+    emojisWithNames.set(emoticon[i]["emoji"], emoticon[i]["name"]);
   }
 
   let disposableTwo = vscode.commands.registerCommand(
@@ -22,11 +27,13 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       const quickPick = vscode.window.createQuickPick();
-      quickPick.items = emojis.map((x: any) => ({ label: x }));
+      quickPick.items = emojis.map((x: any) => ({
+        label: x + " " + emojisWithNames.get(x),
+      }));
       quickPick.onDidChangeSelection(([item]) => {
         if (item) {
           editor?.edit((edit) => {
-            edit.insert(editor.selection.active, item.label);
+            edit.insert(editor.selection.active, item.label.split(" ")[0]);
           });
           quickPick.dispose();
         }

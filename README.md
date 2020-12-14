@@ -53,3 +53,7 @@ You are also very welcome to create new issues if you have any problems, find bu
 ### 1.0.0
 
 Initial release of `emoji-place`
+
+### 1.1.0
+
+You can now see and search by the name of an emoji when inserting one
