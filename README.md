@@ -56,4 +56,4 @@ Initial release of `emoji-place`
 
 ### 1.1.0
 
-You can now see and search by the name of an emoji when inserting one
+You can now see the name of an emoji (and search by the name of an emoji) when inserting one
