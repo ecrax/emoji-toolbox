@@ -2,6 +2,8 @@
 
 `emoji-toolbox` is a toolbox full of handy features for developers who want to use emojis in their code or documentation more often 😃.
 
+This extension is both featured on the **VSCode Market Place** [(here)](https://marketplace.visualstudio.com/items?itemName=ecrax.emoji-toolbox) and on the **Open VSX Registry** [(here)](https://open-vsx.org/extension/ecrax/emoji-toolbox).
+
 ## Features
 
 - Replace text with a fitting emoji
